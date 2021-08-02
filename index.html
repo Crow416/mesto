@@ -27,6 +27,7 @@
             <ul class="elements__list">
                 <li class="element">
                     <img src="./images/kirill-pershin-1088404-unsplash.png" alt="фото" class="element__image">
+                    <button class="element__delete" title="Удалить" type="button"></button>
                     <div class="element__info">
                         <h2 class="element__title">Карачаевск</h2>
                         <button class="element__like" title="Нравится" type="button"></button>
@@ -34,6 +35,7 @@
                 </li>
                 <li class="element">
                     <img src="./images/kirill-pershin-1404681-unsplash.png" alt="фото" class="element__image">
+                    <button class="element__delete" title="Удалить" type="button"></button>
                     <div class="element__info">
                         <h2 class="element__title">Гора Эльбрус</h2>
                         <button class="element__like" title="Нравится" type="button"></button>
@@ -41,6 +43,7 @@
                 </li>
                 <li class="element">
                     <img src="./images/kirill-pershin-1556355-unsplash.png" alt="фото" class="element__image">
+                    <button class="element__delete" title="Удалить" type="button"></button>
                     <div class="element__info">
                         <h2 class="element__title">Домбай</h2>
                         <button class="element__like" title="Нравится" type="button"></button>
@@ -48,6 +51,7 @@
                 </li>
                 <li class="element">
                     <img src="./images/kirill-pershin-1404681-unsplash.png" alt="фото" class="element__image">
+                    <button class="element__delete" title="Удалить" type="button"></button>
                     <div class="element__info">
                         <h2 class="element__title">Гора Эльбрус</h2>
                         <button class="element__like" title="Нравится" type="button"></button>
@@ -55,6 +59,7 @@
                 </li>
                 <li class="element">
                     <img src="./images/kirill-pershin-1556355-unsplash.png" alt="фото" class="element__image">
+                    <button class="element__delete" title="Удалить" type="button"></button>
                     <div class="element__info">
                         <h2 class="element__title">Домбай</h2>
                         <button class="element__like" title="Нравится" type="button"></button>
@@ -62,6 +67,7 @@
                 </li>
                 <li class="element">
                     <img src="./images/kirill-pershin-1088404-unsplash.png" alt="фото" class="element__image">
+                    <button class="element__delete" title="Удалить" type="button"></button>
                     <div class="element__info">
                         <h2 class="element__title">Карачаево-Черкессия</h2>
                         <button class="element__like" title="Нравится" type="button"></button>
@@ -73,20 +79,21 @@
     <footer class="footer">
         <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_edit">
         <div class="popup__container">
-            <button class="popup__button-close" title="Закрыть" type="button"></button>
+            <button class="popup__button-close popup__button-close_edit" title="Закрыть" type="button"></button>
             <h2 class="popup__title">Редактировать&nbsp;профиль</h2>
             <form class="popup__input" name="popup">
                 <input type="text" class="popup__field popup__field_name" name="name" value="Имя" placeholder="Имя">
                 <input type="text" class="popup__field popup__field_about" name="about" value="О себе"
                     placeholder="О себе">
-                <button class="popup__button-save" type="submit" value="Сохранить">Сохранить</button>
+                <button class="popup__button-save popup__button-save_edit" type="submit"
+                    value="Сохранить">Сохранить</button>
             </form>
         </div>
     </div>
-    <div class="popup__add">
-        <div class="popup__container">
+    <div class="popup popup_add">
+        <div class="popup__container popup__container_add">
             <button class="popup__button-close popup__button-close_add" title="Закрыть" type="button"></button>
             <h2 class="popup__title">Новое&nbsp;место</h2>
             <form class="popup__input" name="popup">
@@ -96,6 +103,24 @@
             </form>
         </div>
     </div>
+    <div class="popup__image">
+        <button class="popup__button-close popup__button-close_image" title="Закрыть" type="button"></button>
+        <figure class="popup__container-image">
+            <img class="popup__image_img"
+                src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="Байкал">
+            <figcaption class="popup__image_title"></figcaption>
+        </figure>
+    </div>
+    <template id="card-template">
+        <li class="element">
+            <img src="./images/kirill-pershin-1088404-unsplash.png" alt="фото" class="element__image">
+            <button class="element__delete" title="Удалить" type="button"></button>
+            <div class="element__info">
+                <h2 class="element__title">Карачаевск</h2>
+                <button class="element__like" title="Нравится" type="button"></button>
+            </div>
+        </li>
+    </template>
     <script src="./script/script.js"></script>
 </body>
 
